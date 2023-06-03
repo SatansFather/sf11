@@ -1,0 +1,5 @@
+build/
+test/
+.vs/
+CMakeLists.txt
+CMakePresets.json
