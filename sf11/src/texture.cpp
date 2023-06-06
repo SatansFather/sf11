@@ -173,12 +173,11 @@ SfTexture2D::SfTexture2D(SfInstance* instance, const TextureParams2D& params, vo
 	Data->Texture.Params2D = params;
 	Data->Usage = params.Usage;
 
-	UINT size = params.TextureFormat.GetTypeSize();
 	D3D11_SUBRESOURCE_DATA d = {};
 	if (data)
 	{
 		d.pSysMem = data;
-		d.SysMemPitch = params.Width * size;
+		d.SysMemPitch = params.Width * params.TextureFormat.GetTypeSize() * params.TextureFormat.Channels;
 	}
 
 	sfAssertHR(Data->Instance->GetDevice()->CreateTexture2D(&Data->Texture.TextureDesc2D, d.pSysMem ? &d : NULL, &Data->Texture.Texture2D),

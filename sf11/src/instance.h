@@ -26,8 +26,6 @@ struct InstanceCreationParams
 
 	// the graphics device to use, leave nullptr for system default
 	class SfAdapter* Adapter = nullptr;
-
-	std::function<void(int, int)> RawMouseCallback;
 };
 
 class SfInstance
