@@ -11,7 +11,7 @@ enum class	EBlendFactor
 	One = 2,
 	SrcColor = 3,
 	InvSrcColor = 4,
-	ScrAlpha = 5,
+	SrcAlpha = 5,
 	InvSrcAlpha = 6,
 	DestAlpha = 7,
 	InvDestAlpha = 8,
